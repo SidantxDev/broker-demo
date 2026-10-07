@@ -578,7 +578,7 @@ footer a:hover{color:#f4f0e8}
 
   var fmtPrice = function(x){
     if (x.mode === "rent") return "₹" + x.price.toLocaleString("en-IN") + "<small> / month</small>";
-    return x.price >= 10000000 ? "₹" + (x.price / 10000000).toFixed(2).replace(/.?0+$/, "") + " Cr" : "₹" + Math.round(x.price / 100000) + " L";
+    return x.price >= 10000000 ? "₹" + (x.price / 10000000).toFixed(2).replace(/\.?0+$/, "") + " Cr" : "₹" + Math.round(x.price / 100000) + " L";
   };
   var enquireText = function(x){
     return "Hi " + NAME + ", I'm interested in the " + x.title.toLowerCase() + " in " + x.locName +
