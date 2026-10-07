@@ -556,11 +556,29 @@ footer a:hover{color:#f4f0e8}
     {mode:"rent", title:"2 BHK family flat near schools", bhk:2, type:"Apartment", sqft:1080, price:31000, loc:3, status:"Available now", facing:"East facing", img:"photo-1682662046486-23b39bda0799"},
     {mode:"rent", title:"3 BHK in a low-rise building", bhk:3, type:"Apartment", sqft:1400, price:38000, loc:4, status:"Available now", facing:"South facing", img:"photo-1670504503763-7026e1ad278b"}
   ];
-  L.forEach(function(x){ x.locName = LOCS[Math.min(x.loc, LOCS.length - 1)]; });
+  // Price level by area, so a local broker sees believable numbers (base = mid-range areas)
+  var TIER = {
+    "jayanagar":1.7,"basavanagudi":1.7,"koramangala":1.7,"indiranagar":1.8,"malleshwaram":1.7,
+    "sadashivanagar":2.2,"frazer town":1.6,"richmond town":1.9,"ulsoor":1.7,"domlur":1.5,
+    "hsr layout":1.5,"cox town":1.5,"cv raman nagar":1.3,"old airport road":1.4,"rajajinagar":1.4,
+    "mg road":2.2,"wilson garden":1.5,"seshadripuram":1.5,"jp nagar":1.3,"btm layout":1.2,
+    "hebbal":1.3,"bellandur":1.2,"sarjapur road":1.1,"rt nagar":1.2,"sahakar nagar":1.2,
+    "electronic city":0.8,"electronic city phase 2":0.75,"chandapura":0.6,"attibele":0.55,"anekal":0.55,
+    "devanahalli":0.7,"hoskote":0.6,"nelamangala":0.6,"bidadi":0.55,"kengeri":0.75,
+    "kengeri satellite town":0.75,"budigere":0.65,"bagalur":0.7,"bommasandra":0.7,"magadi road":0.8,
+    "tumkur road":0.8,"mysore road":0.8,"uttarahalli":0.85,"kanakapura road":0.95,"yelahanka":0.95,
+    "yelahanka new town":0.95,"vidyaranyapura":0.85,"hesaraghatta road":0.75,"hosa road":0.85,"begur":0.85
+  };
+  var T = TIER[AREA.toLowerCase()] || 1;
+  var nice = function(v, step){ return Math.round(v / step) * step; };
+  L.forEach(function(x){
+    x.locName = LOCS[Math.min(x.loc, LOCS.length - 1)];
+    x.price = x.mode === "rent" ? nice(x.price * T, 500) : nice(x.price * T, 100000);
+  });
 
   var fmtPrice = function(x){
     if (x.mode === "rent") return "₹" + x.price.toLocaleString("en-IN") + "<small> / month</small>";
-    return x.price >= 10000000 ? "₹" + (x.price / 10000000).toFixed(2).replace(/0$/, "") + " Cr" : "₹" + Math.round(x.price / 100000) + " L";
+    return x.price >= 10000000 ? "₹" + (x.price / 10000000).toFixed(2).replace(/.?0+$/, "") + " Cr" : "₹" + Math.round(x.price / 100000) + " L";
   };
   var enquireText = function(x){
     return "Hi " + NAME + ", I'm interested in the " + x.title.toLowerCase() + " in " + x.locName +
@@ -586,9 +604,19 @@ footer a:hover{color:#f4f0e8}
   });
 
   /* filters */
+  // Budget bands follow the area's price level too
+  var amt = function(v){ return v >= 10000000 ? (v / 10000000).toFixed(2).replace(/\.?0+$/, "") + " Cr" : Math.round(v / 100000) + " L"; };
+  var rentAmt = function(v){ return v.toLocaleString("en-IN"); };
+  var bands = function(cuts, fmt, top){
+    var out = [["", "Any budget"]];
+    out.push(["0-" + cuts[0], "Under ₹" + fmt(cuts[0])]);
+    for (var i = 0; i < cuts.length - 1; i++) out.push([cuts[i] + "-" + cuts[i + 1], "₹" + fmt(cuts[i]) + " to " + fmt(cuts[i + 1])]);
+    out.push([cuts[cuts.length - 1] + "-" + top, "Above ₹" + fmt(cuts[cuts.length - 1])]);
+    return out;
+  };
   var BUDGETS = {
-    buy: [["", "Any budget"], ["0-6000000", "Under ₹60 L"], ["6000000-9000000", "₹60 L to 90 L"], ["9000000-12000000", "₹90 L to 1.2 Cr"], ["12000000-99999999", "Above ₹1.2 Cr"]],
-    rent: [["", "Any budget"], ["0-20000", "Under ₹20,000"], ["20000-35000", "₹20,000 to 35,000"], ["35000-9999999", "Above ₹35,000"]]
+    buy: bands([6000000, 9000000, 12000000].map(function(v){ return nice(v * T, 500000); }), amt, 999999999),
+    rent: bands([20000, 35000].map(function(v){ return nice(v * T, 1000); }), rentAmt, 99999999)
   };
   var state = { mode: "buy", bhk: "", budget: "", loc: "" };
   var fill = function(sel, opts){ sel.innerHTML = opts.map(function(o){ return '<option value="' + o[0] + '">' + o[1] + '</option>'; }).join(""); };
