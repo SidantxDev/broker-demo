@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Consultants in Bengaluru</title>
+<meta name="description" content="Flats, plots and rentals in Bengaluru. Call or WhatsApp for current availability and site visits.">
+<meta name="theme-color" content="#1d3a32">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d3a32'/%3E%3Cpath d='M14 50V28l18-14 18 14v22H38V36H26v14z' fill='%23e9e3d7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com">
+<style>
+:root{
+  --ink:#16201c; --ink-2:#3c4743; --muted:#6c7570;
+  --paper:#f4f0e8; --paper-2:#ebe5da; --card:#fbf9f4; --line:#d9d1c3;
+  --green:#1d3a32; --green-2:#2b5146; --gold:#b08a4e; --gold-2:#c9a46a;
+  --wa:#1f8f4e;
+  --serif:"Newsreader",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
+  --nav-h:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+.eyebrow.line{display:flex;align-items:center;gap:14px}
+.eyebrow.line::before{content:"";width:36px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.05}
+h2{font-size:clamp(36px,5vw,60px)}
+h2 em,h1 em{font-style:italic;color:var(--green-2)}
+.lead{font-size:18px;color:var(--ink-2);max-width:56ch}
+section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:48px;flex-wrap:wrap}
+.sec-head h2{margin-top:14px}
+
+/* buttons: sharp corners by design */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border:1px solid var(--green);background:var(--green);color:#f4f0e8;font-weight:600;font-size:15px;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn:hover{background:var(--green-2);border-color:var(--green-2)}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn.ghost:hover{background:var(--green);color:#f4f0e8}
+.btn.light{background:#f4f0e8;color:var(--green);border-color:#f4f0e8}
+.btn.light:hover{background:transparent;color:#f4f0e8}
+.btn.wa{background:var(--wa);border-color:var(--wa)}
+.btn.wa:hover{background:#18763f;border-color:#18763f}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;display:flex;align-items:center;transition:background .35s,box-shadow .35s,color .35s;color:#f4f0e8}
+.nav.solid{background:rgba(244,240,232,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);color:var(--ink)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mono{width:42px;height:42px;border:1px solid currentColor;display:grid;place-items:center;font-family:var(--serif);font-size:20px;flex:none}
+.brand-name{font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px}
+.brand-sub{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.75}
+.nav-links{display:flex;gap:30px;font-size:14px;font-weight:500}
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:currentColor;transition:right .3s}
+.nav-links a:hover::after{right:0}
+.nav-cta{display:flex;gap:10px}
+.nav .btn{padding:10px 16px;font-size:14px}
+.nav:not(.solid) .btn.ghost{color:#f4f0e8;border-color:rgba(244,240,232,.6)}
+.nav:not(.solid) .btn.ghost:hover{background:#f4f0e8;color:var(--green)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#f4f0e8;padding:calc(var(--nav-h) + 40px) 0 56px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 14s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(16,30,25,.55) 0%,rgba(16,30,25,.25) 35%,rgba(16,30,25,.82) 100%)}
+.hero h1{font-size:clamp(46px,7.4vw,104px);max-width:12ch;margin:18px 0 22px}
+.hero h1 em{color:#e8d6b3}
+.hero .eyebrow{color:#e8d6b3}
+.hero .lead{color:rgba(244,240,232,.88);max-width:52ch}
+.rating-chip{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:10px 14px;border:1px solid rgba(244,240,232,.35);font-size:14px;background:rgba(16,30,25,.35);backdrop-filter:blur(6px)}
+.stars{color:#e8b54d;letter-spacing:2px}
+.search{margin-top:34px;display:grid;grid-template-columns:auto 1fr 1fr 1fr auto;background:var(--card);color:var(--ink);box-shadow:0 30px 60px -20px rgba(0,0,0,.45);max-width:980px}
+.search .seg{display:flex;border-right:1px solid var(--line)}
+.search .seg button{border:0;background:none;padding:0 22px;font-weight:600;font-size:14px;cursor:pointer;color:var(--muted);position:relative}
+.search .seg button.on{color:var(--green)}
+.search .seg button.on::after{content:"";position:absolute;left:18px;right:18px;bottom:0;height:2px;background:var(--gold)}
+.field{display:flex;flex-direction:column;padding:12px 20px;border-right:1px solid var(--line)}
+.field label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.field select{border:0;background:none;font-weight:600;font-size:15px;padding:4px 0;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none}
+.search .btn{border-radius:0;padding:0 30px;height:100%}
+
+/* featured stacking cards */
+#featured{background:var(--paper-2)}
+.stack{position:relative}
+.stack-card{position:sticky;display:grid;grid-template-columns:1.25fr 1fr;background:var(--card);border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(22,32,28,.35);margin-bottom:56px;transform-origin:center top;will-change:transform;min-height:520px}
+.stack-card:last-child{margin-bottom:0}
+.stack-card .pic{position:relative;overflow:hidden}
+.stack-card .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.stack-card:hover .pic img{transform:scale(1.04)}
+.tag{position:absolute;left:18px;top:18px;background:var(--card);color:var(--green);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px}
+.stack-card .body{padding:46px 44px;display:flex;flex-direction:column}
+.stack-card .num{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;font-weight:600}
+.stack-card h3{font-size:clamp(32px,3.4vw,46px);margin:auto 0 12px}
+.loc{display:flex;align-items:center;gap:8px;color:var(--ink-2);font-size:15px}
+.loc svg{width:16px;height:16px;color:var(--gold)}
+.specs{display:flex;gap:22px;flex-wrap:wrap;margin:22px 0;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;color:var(--ink-2)}
+.specs b{display:block;font-size:17px;color:var(--ink);font-weight:600}
+.price{font-family:var(--serif);font-size:38px;color:var(--green)}
+.price small{font-family:var(--sans);font-size:14px;color:var(--muted)}
+.card-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.card-actions .btn{padding:12px 18px;font-size:14px}
+
+/* listings grid */
+.filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:30px;padding:16px;background:var(--card);border:1px solid var(--line)}
+.tabs{display:flex;border:1px solid var(--line)}
+.tabs button{border:0;background:none;padding:10px 20px;font-weight:600;font-size:14px;cursor:pointer;color:var(--muted)}
+.tabs button.on{background:var(--green);color:#f4f0e8}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:none;padding:9px 14px;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--green)}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.filters select{border:1px solid var(--line);background:var(--paper);padding:10px 12px;font-size:14px;font-weight:500;outline:none}
+.count{margin-left:auto;font-size:14px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.lcard{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.lcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -28px rgba(22,32,28,.45)}
+.lcard .pic{position:relative;aspect-ratio:4/3;overflow:hidden}
+.lcard .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.lcard:hover .pic img{transform:scale(1.06)}
+.lcard .status{position:absolute;right:14px;top:14px;background:rgba(16,30,25,.82);color:#f4f0e8;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px}
+.lcard .b{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.lcard .price{font-size:30px}
+.lcard h3{font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:0;line-height:1.35}
+.lcard .meta{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.lcard .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding-top:14px}
+.lcard .acts .btn{justify-content:center;padding:11px 10px;font-size:14px}
+.empty{grid-column:1/-1;padding:60px 20px;text-align:center;border:1px dashed var(--line);color:var(--muted)}
+.empty a{color:var(--green);font-weight:600;text-decoration:underline}
+
+/* services */
+#services{background:var(--green);color:#f4f0e8}
+#services h2 em{color:#e8d6b3}
+#services .lead{color:rgba(244,240,232,.8)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(244,240,232,.2)}
+.svc div{padding:34px 28px 10px 0;border-right:1px solid rgba(244,240,232,.14);margin-right:28px}
+.svc div:last-child{border-right:0;margin-right:0}
+.svc svg{width:34px;height:34px;color:var(--gold-2);margin-bottom:22px}
+.svc h3{font-size:26px;margin-bottom:10px}
+.svc p{color:rgba(244,240,232,.75);font-size:15px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.about .pic{position:relative;aspect-ratio:4/5;overflow:hidden}
+.about .pic img{width:100%;height:100%;object-fit:cover}
+.about .badge{position:absolute;left:22px;bottom:22px;right:22px;background:var(--card);padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.about .badge .big{font-family:var(--serif);font-size:36px;line-height:1;color:var(--green)}
+.about p{color:var(--ink-2);margin-top:18px;max-width:56ch}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+.facts div{border-top:1px solid var(--line);padding-top:14px}
+.facts b{display:block;font-size:15px}
+.facts span{font-size:14px;color:var(--muted)}
+
+/* localities */
+#localities{background:var(--paper-2)}
+.locs{display:flex;flex-wrap:wrap;gap:12px}
+.locs button{border:1px solid var(--line);background:var(--card);padding:16px 22px;font-family:var(--serif);font-size:24px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .25s}
+.locs button small{font-family:var(--sans);font-size:13px;color:var(--muted)}
+.locs button:hover{background:var(--green);color:#f4f0e8;border-color:var(--green)}
+.locs button:hover small{color:rgba(244,240,232,.75)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:s}
+.steps div{counter-increment:s;padding-top:22px;border-top:1px solid var(--ink)}
+.steps div::before{content:"0" counter(s);font-family:var(--serif);font-size:44px;color:var(--gold);display:block;line-height:1;margin-bottom:16px}
+.steps h3{font-family:var(--sans);font-size:18px;font-weight:600;letter-spacing:0;margin-bottom:8px}
+.steps p{font-size:15px;color:var(--ink-2)}
+
+/* contact */
+#contact{background:var(--green);color:#f4f0e8}
+.contact{display:grid;grid-template-columns:1fr 1.15fr;gap:70px}
+#contact h2 em{color:#e8d6b3}
+#contact .lead{color:rgba(244,240,232,.8)}
+.direct{margin-top:34px;display:flex;flex-direction:column;gap:14px}
+.direct a{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid rgba(244,240,232,.18);font-size:18px}
+.direct a:hover{color:#e8d6b3}
+.direct svg{width:22px;height:22px;color:var(--gold-2)}
+.direct small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,240,232,.6)}
+form.enq{background:var(--card);color:var(--ink);padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form.enq h3{grid-column:1/-1;font-size:32px}
+form.enq .f{display:flex;flex-direction:column;gap:6px}
+form.enq .full{grid-column:1/-1}
+form.enq label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+form.enq input,form.enq select,form.enq textarea{border:1px solid var(--line);background:var(--paper);padding:13px 14px;font-size:15px;outline:none;transition:border-color .2s}
+form.enq input:focus,form.enq select:focus,form.enq textarea:focus{border-color:var(--green)}
+form.enq textarea{min-height:96px;resize:vertical}
+form.enq .btn{grid-column:1/-1;justify-content:center;padding:16px}
+form.enq .note{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.err{border-color:#b3412e!important}
+
+.map{margin-top:0;height:420px;border-top:1px solid var(--line);filter:grayscale(.2)}
+.map iframe{width:100%;height:100%;border:0}
+
+footer{background:#13251f;color:rgba(244,240,232,.75);padding:60px 0 110px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer .brand{color:#f4f0e8}
+footer h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#e8d6b3;margin-bottom:14px;font-weight:600}
+footer li{list-style:none;margin-bottom:8px}
+footer a:hover{color:#f4f0e8}
+.foot-bottom{grid-column:1/-1;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(244,240,232,.12);padding-top:22px;margin-top:20px;font-size:13px;color:rgba(244,240,232,.5)}
+
+/* floating + mobile bar */
+.fab{position:fixed;right:24px;bottom:24px;z-index:40;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:14px 18px;font-weight:600;box-shadow:0 14px 30px -10px rgba(0,0,0,.4);transition:transform .25s}
+.fab:hover{transform:translateY(-3px)}
+.fab svg{width:22px;height:22px}
+.mbar{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+.hero .rv{transition-duration:1.3s}
+
+@media (max-width:1020px){
+  .nav-links{display:none}
+  .search{grid-template-columns:1fr 1fr}
+  .search .seg{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line)}
+  .search .seg button{flex:1;padding:14px}
+  .field{border-bottom:1px solid var(--line)}
+  .search .btn{grid-column:1/-1;padding:16px;justify-content:center}
+  .stack-card{grid-template-columns:1fr;min-height:0}
+  .stack-card .pic{aspect-ratio:16/10}
+  .stack-card .body{padding:28px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .svc{grid-template-columns:repeat(2,1fr)}
+  .svc div:nth-child(2){border-right:0;margin-right:0}
+  .about,.contact{grid-template-columns:1fr;gap:44px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  footer .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  :root{--nav-h:64px}
+  .wrap{width:calc(100% - 32px)}
+  section{padding:76px 0}
+  .nav-cta .btn.ghost{display:none}
+  .nav-cta .btn{padding:9px 12px}
+  .brand-name{max-width:180px;font-size:12px}
+  .brand-sub{white-space:nowrap;font-size:9px;letter-spacing:.14em}
+  .brand-sub .bs-pre{display:none}
+  .search .field.wide{grid-column:1/-1}
+  .mono{width:36px;height:36px;font-size:17px}
+  .hero{padding-bottom:28px}
+  .search{grid-template-columns:1fr 1fr}
+  .field{padding:10px 14px}
+  .grid{grid-template-columns:1fr}
+  .count{margin-left:0;width:100%}
+  .stack-card h3{font-size:30px}
+  .price{font-size:32px}
+  .svc{grid-template-columns:1fr}
+  .svc div{border-right:0;margin-right:0;border-bottom:1px solid rgba(244,240,232,.14);padding-right:0}
+  .steps{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  form.enq{grid-template-columns:1fr;padding:26px}
+  .locs button{font-size:19px;padding:12px 16px}
+  footer .wrap{grid-template-columns:1fr}
+  .fab{display:none}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:45;box-shadow:0 -8px 24px -12px rgba(0,0,0,.35)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;font-weight:600;color:#fff}
+  .mbar a:first-child{background:var(--green)}
+  .mbar a:last-child{background:var(--wa)}
+  .mbar svg{width:20px;height:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-bg img{animation:none;transform:none}
+  *{scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.5" d="m11 12 9-9m-4 4 3 3m-5-1 2 2"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M3 6h18v12H3zM3 6l9 7 9-7"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Home">
+      <span class="mono" data-f="initial">Y</span>
+      <span><span class="brand-name" data-f="name" style="display:block">Your Agency</span><span class="brand-sub"><span class="bs-pre">Property consultants · </span><span data-f="area">Whitefield</span></span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#properties">Properties</a><a href="#services">Services</a><a href="#about">About</a><a href="#localities">Localities</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn ghost" data-href="tel"><svg><use href="#i-phone"/></svg><span>Call</span></a>
+      <a class="btn wa" data-href="wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1600555179901-107bf80d25cf?w=2000&q=80&auto=format&fit=crop" alt="Apartment towers and green trees seen from a balcony" fetchpriority="high"></div>
+  <div class="wrap">
+    <p class="eyebrow line rv"><span>Buy · Sell · Rent in <span data-f="area">Whitefield</span>, Bengaluru</span></p>
+    <h1 class="rv d1">Flats, plots and rentals in <em data-f="area">Whitefield</em>.</h1>
+    <p class="lead rv d2">Tell us your budget and BHK. <span data-f="name">Your Agency</span> shortlists what is actually available this week and sets up site visits around your schedule.</p>
+    <div class="rating-chip rv d2" id="ratingChip" hidden><span class="stars" id="ratingStars"></span><span><b id="ratingVal"></b> on Google · <span id="ratingCount"></span> reviews</span></div>
+    <form class="search rv d3" id="heroSearch" onsubmit="return false">
+      <div class="seg" role="tablist"><button type="button" class="on" data-mode="buy">Buy</button><button type="button" data-mode="rent">Rent</button></div>
+      <div class="field"><label for="hsBhk">BHK</label><select id="hsBhk"><option value="">Any</option><option>1</option><option>2</option><option>3</option><option value="4">4+</option></select></div>
+      <div class="field"><label for="hsBudget">Budget</label><select id="hsBudget"></select></div>
+      <div class="field wide"><label for="hsLoc">Locality</label><select id="hsLoc"></select></div>
+      <button class="btn" type="submit" id="hsGo">Search homes <svg><use href="#i-arrow"/></svg></button>
+    </form>
+  </div>
+</section>
+
+<section id="featured">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow line rv">Picked this week</p><h2 class="rv d1">Homes worth a <em>site visit</em>.</h2></div>
+      <p class="lead rv d2" style="max-width:40ch">Three homes we would show first if you called us today.</p>
+    </div>
+    <div class="stack" id="stack"></div>
+  </div>
+</section>
+
+<section id="properties">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow line rv">All listings</p><h2 class="rv d1">Find your <em>next home</em>.</h2></div>
+    </div>
+    <div class="filters rv">
+      <div class="tabs" id="fMode"><button class="on" data-mode="buy">Buy</button><button data-mode="rent">Rent</button></div>
+      <div class="chips" id="fBhk"><button class="chip on" data-bhk="">All</button><button class="chip" data-bhk="1">1 BHK</button><button class="chip" data-bhk="2">2 BHK</button><button class="chip" data-bhk="3">3 BHK</button><button class="chip" data-bhk="4">4+ / Plot</button></div>
+      <select id="fBudget" aria-label="Budget"></select>
+      <select id="fLoc" aria-label="Locality"></select>
+      <span class="count" id="fCount"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow line rv" style="color:#e8d6b3">What we do</p><h2 class="rv d1">One office for <em>every move</em>.</h2></div>
+      <p class="lead rv d2" style="max-width:42ch">From the first site visit to registration day, you deal with one person who knows the area.</p>
+    </div>
+    <div class="svc">
+      <div class="rv"><svg><use href="#i-home"/></svg><h3>Buy</h3><p>Ready and under-construction flats, villas and plots, with documents checked before you pay a token.</p></div>
+      <div class="rv d1"><svg><use href="#i-tag"/></svg><h3>Sell</h3><p>Pricing based on recent deals in your society, photos, listing and buyer visits handled for you.</p></div>
+      <div class="rv d2"><svg><use href="#i-key"/></svg><h3>Rent</h3><p>Tenant and owner matching, rental agreement, police verification and move-in support.</p></div>
+      <div class="rv d3"><svg><use href="#i-globe"/></svg><h3>NRI help</h3><p>Video walkthroughs, power of attorney guidance and property management while you are abroad.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="pic rv">
+      <img src="https://images.unsplash.com/photo-1787303278832-4b952a3c5183?w=1100&q=80&auto=format&fit=crop" alt="Residential towers and greenery in the city" loading="lazy">
+      <div class="badge" id="aboutBadge"><div><div class="big" data-f="area">Whitefield</div><span style="font-size:13px;color:var(--muted)">and nearby localities</span></div><a class="btn ghost" data-href="tel" style="padding:10px 14px;font-size:14px"><svg><use href="#i-phone"/></svg>Call now</a></div>
+    </div>
+    <div>
+      <p class="eyebrow line rv">About us</p>
+      <h2 class="rv d1">Local people, <em>straight answers</em>.</h2>
+      <p class="rv d2"><span data-f="name">Your Agency</span> is a property consultancy based in <span data-f="area">Whitefield</span>, Bengaluru. We help families and investors buy, sell and rent homes in <span data-f="area">Whitefield</span> and the neighbourhoods around it.</p>
+      <p class="rv d2">You get the real price range before the first visit, a clear picture of what each society is like to live in, and help with the paperwork until the keys are in your hand.</p>
+      <div class="facts rv d3">
+        <div><b>Based in <span data-f="area">Whitefield</span></b><span>Site visits on weekdays and weekends</span></div>
+        <div><b>Buy, sell and rent</b><span>Apartments, villas, plots and rentals</span></div>
+        <div id="factRating" hidden><b id="factRatingVal"></b><span>Read what clients say on Google</span></div>
+        <div><b>Paperwork support</b><span>Agreement, loan coordination, registration</span></div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:34px" class="rv d3">
+        <a class="btn" href="#contact">Book a site visit <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn ghost" id="reviewsBtn" target="_blank" rel="noopener" hidden>Read our Google reviews</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="localities">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow line rv">Where we work</p><h2 class="rv d1">Localities we <em>cover</em>.</h2></div>
+      <p class="lead rv d2" style="max-width:40ch">Tap a locality to see homes there.</p>
+    </div>
+    <div class="locs rv" id="locs"></div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow line rv">How it works</p><h2 class="rv d1">From first call to <em>keys</em>.</h2></div></div>
+    <div class="steps">
+      <div class="rv"><h3>Share your requirement</h3><p>Budget, BHK, locality and move-in date over a call or WhatsApp.</p></div>
+      <div class="rv d1"><h3>Get a shortlist</h3><p>Homes that match, with photos, price and society details.</p></div>
+      <div class="rv d2"><h3>Visit together</h3><p>We plan visits back to back so you see more in one trip.</p></div>
+      <div class="rv d3"><h3>Close with confidence</h3><p>Negotiation, agreement, loan coordination and registration.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <p class="eyebrow line rv" style="color:#e8d6b3">Talk to us</p>
+      <h2 class="rv d1">Tell us what you are <em>looking for</em>.</h2>
+      <p class="lead rv d2">Send your requirement and we will reply on WhatsApp with matching homes.</p>
+      <div class="direct rv d3">
+        <a data-href="tel"><svg><use href="#i-phone"/></svg><span><small>Call</small><span data-f="phone">+91 XXXXX XXXXX</span></span></a>
+        <a data-href="wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span><small>WhatsApp</small>Chat with <span data-f="name">Your Agency</span></span></a>
+        <a href="#map"><svg><use href="#i-pin"/></svg><span><small>Office</small><span data-f="area">Whitefield</span>, Bengaluru</span></a>
+      </div>
+    </div>
+    <form class="enq rv d2" id="enq" novalidate>
+      <h3>Send an enquiry</h3>
+      <div class="f"><label for="eName">Your name</label><input id="eName" autocomplete="name" required></div>
+      <div class="f"><label for="ePhone">Phone</label><input id="ePhone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+      <div class="f"><label for="eWant">I want to</label><select id="eWant"><option>Buy</option><option>Rent</option><option>Sell my property</option><option>Rent out my property</option></select></div>
+      <div class="f"><label for="eBhk">BHK</label><select id="eBhk"><option>Any</option><option>1 BHK</option><option>2 BHK</option><option>3 BHK</option><option>4+ BHK</option><option>Plot</option></select></div>
+      <div class="f"><label for="eBudget">Budget</label><input id="eBudget" placeholder="e.g. 80 L to 1 Cr"></div>
+      <div class="f"><label for="eLoc">Preferred locality</label><select id="eLoc"></select></div>
+      <div class="f full"><label for="eMsg">Anything else</label><textarea id="eMsg" placeholder="Move-in date, gated society, near school or metro..."></textarea></div>
+      <button class="btn wa" type="submit"><svg><use href="#i-wa"/></svg>Send on WhatsApp</button>
+      <p class="note">Opens WhatsApp with your details filled in. Prefer to talk? <a data-href="tel" style="text-decoration:underline">Call us</a>.</p>
+    </form>
+  </div>
+</section>
+
+<div class="map" id="map"><iframe id="mapFrame" title="Office location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand"><span class="mono" data-f="initial">Y</span><span><span class="brand-name" data-f="name" style="display:block">Your Agency</span><span class="brand-sub"><span class="bs-pre">Property consultants · </span><span data-f="area">Whitefield</span></span></span></div>
+      <p style="margin-top:18px;max-width:40ch">Buying, selling and renting homes in <span data-f="area">Whitefield</span> and nearby localities of Bengaluru.</p>
+    </div>
+    <div><h4>Explore</h4><ul><li><a href="#properties">Properties</a></li><li><a href="#services">Services</a></li><li><a href="#localities">Localities</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a data-href="tel" data-f="phone">+91 XXXXX XXXXX</a></li><li><a data-href="wa" target="_blank" rel="noopener">WhatsApp</a></li><li><span data-f="area">Whitefield</span>, Bengaluru</li></ul></div>
+    <div class="foot-bottom"><span>© <span id="yr"></span> <span data-f="name">Your Agency</span></span><span>Sample website · design by NavixStudio · photos: Unsplash</span></div>
+  </div>
+</footer>
+
+<a class="fab" data-href="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+<div class="mbar"><a data-href="tel"><svg><use href="#i-phone"/></svg>Call</a><a data-href="wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  /* ---------- personalisation from the link ----------
+     ?n=Agency Name&a=Area&p=919845012345&w=(whatsapp, defaults to p)&r=4.7&c=36&m=(Google Maps URL) */
+  var q = new URLSearchParams(location.search);
+  var clean = function(s, max){ return (s || "").replace(/[<>]/g, "").trim().slice(0, max); };
+  // No details in the link = neutral sample (for Instagram / cold contacts): no agency name, no phone
+  var NAME = clean(q.get("n"), 60) || "Your Agency";
+  var AREA = clean(q.get("a"), 40) || "Whitefield";
+  var PHONE = (q.get("p") || "").replace(/\D/g, "");
+  if (PHONE.length === 10) PHONE = "91" + PHONE;
+  var WA = (q.get("w") || PHONE).replace(/\D/g, "");
+  if (WA.length === 10) WA = "91" + WA;
+  var RATING = parseFloat(q.get("r")), REVIEWS = parseInt(q.get("c"), 10);
+  var MAPS = q.get("m") && /^https:\/\/(www\.)?google\.[a-z.]+\/maps\//.test(q.get("m")) ? q.get("m") : "";
+
+  var prettyPhone = !PHONE ? "+91 XXXXX XXXXX" :
+    PHONE.length === 12 ? "+" + PHONE.slice(0, 2) + " " + PHONE.slice(2, 7) + " " + PHONE.slice(7) : "+" + PHONE;
+  var initial = NAME.replace(/^(the|sri|shri|sree)\s+/i, "").charAt(0).toUpperCase() || "Y";
+  // Without a number in the link, WhatsApp opens its "send to" picker rather than a stranger's chat
+  var TEL = PHONE ? "tel:+" + PHONE : "#contact";
+  var waLink = function(text){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text); };
+
+  document.title = NAME + " · Property consultants in " + AREA + ", Bengaluru";
+  document.querySelector('meta[name="description"]').content =
+    "Flats, plots and rentals in " + AREA + ", Bengaluru. Call or WhatsApp " + NAME + " for current availability and site visits.";
+  document.querySelectorAll('[data-f="name"]').forEach(function(e){ e.textContent = NAME; });
+  document.querySelectorAll('[data-f="area"]').forEach(function(e){ e.textContent = AREA; });
+  document.querySelectorAll('[data-f="initial"]').forEach(function(e){ e.textContent = initial; });
+  document.querySelectorAll('[data-f="phone"]').forEach(function(e){ e.textContent = prettyPhone; });
+  document.querySelectorAll('[data-href="tel"]').forEach(function(e){ e.href = TEL; });
+  document.querySelectorAll('[data-href="wa"]').forEach(function(e){
+    e.href = waLink("Hi " + NAME + ", I found you online and I'm looking for a property in " + AREA + ".");
+  });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // Real Google rating only (never invented): shown only when passed in the link
+  if (RATING > 0 && REVIEWS > 0) {
+    var full = Math.round(RATING);
+    document.getElementById("ratingStars").textContent = "★★★★★".slice(0, full) + "☆☆☆☆☆".slice(0, 5 - full);
+    document.getElementById("ratingVal").textContent = RATING.toFixed(1);
+    document.getElementById("ratingCount").textContent = REVIEWS;
+    document.getElementById("ratingChip").hidden = false;
+    document.getElementById("factRatingVal").textContent = RATING.toFixed(1) + " stars from " + REVIEWS + " Google reviews";
+    document.getElementById("factRating").hidden = false;
+  }
+  var reviewsUrl = MAPS || ("https://www.google.com/maps/search/" + encodeURIComponent(NAME + " " + AREA + " Bengaluru"));
+  if (RATING > 0) { var rb = document.getElementById("reviewsBtn"); rb.href = reviewsUrl; rb.hidden = false; }
+  document.getElementById("mapFrame").src =
+    "https://www.google.com/maps?q=" + encodeURIComponent(NAME + ", " + AREA + ", Bengaluru") + "&output=embed";
+
+  /* ---------- localities near the agent's area ---------- */
+  var NEAR = {
+    "whitefield":["Hoodi","Brookefield","Varthur","Kadugodi","ITPL"],
+    "koramangala":["HSR Layout","BTM Layout","Ejipura","Indiranagar","Domlur"],
+    "indiranagar":["Domlur","HAL","CV Raman Nagar","Ulsoor","Old Airport Road"],
+    "hsr layout":["Koramangala","Bellandur","Agara","BTM Layout","Harlur"],
+    "electronic city":["Hosa Road","Bommasandra","Chandapura","Begur","Hebbagodi"],
+    "sarjapur road":["Kasavanahalli","Harlur","Bellandur","Carmelaram","Dommasandra"],
+    "marathahalli":["Bellandur","Kundalahalli","Brookefield","Munnekolala","Panathur"],
+    "hebbal":["Sahakar Nagar","RT Nagar","Thanisandra","Nagawara","Kempapura"],
+    "yelahanka":["Yelahanka New Town","Jakkur","Bagalur","Doddaballapur Road","Kogilu"],
+    "bannerghatta road":["Arekere","Hulimavu","JP Nagar","Gottigere","Bilekahalli"],
+    "jp nagar":["Jayanagar","BTM Layout","Bannerghatta Road","Uttarahalli","Puttenahalli"],
+    "jayanagar":["JP Nagar","Basavanagudi","BTM Layout","Banashankari","Wilson Garden"],
+    "btm layout":["Koramangala","HSR Layout","JP Nagar","Jayanagar","Bilekahalli"],
+    "bellandur":["Sarjapur Road","Marathahalli","HSR Layout","Kasavanahalli","Panathur"],
+    "rajajinagar":["Malleshwaram","Basaveshwaranagar","Vijayanagar","Yeshwanthpur","Mahalakshmi Layout"],
+    "malleshwaram":["Rajajinagar","Sadashivanagar","Seshadripuram","Yeshwanthpur","Mathikere"],
+    "hennur":["Kalyan Nagar","Thanisandra","Kothanur","HRBR Layout","Horamavu"],
+    "kalyan nagar":["HRBR Layout","Hennur","Banaswadi","Kammanahalli","Horamavu"],
+    "kr puram":["Ramamurthy Nagar","Mahadevapura","Hoodi","Horamavu","Battarahalli"],
+    "kanakapura road":["JP Nagar","Konanakunte","Talaghattapura","Banashankari","Vajarahalli"],
+    "devanahalli":["Yelahanka","Bagalur","Hunasamaranahalli","Chikkajala","Budigere"],
+    "thanisandra":["Hennur","Hebbal","Nagawara","Jakkur","Kothanur"]
+  };
+  var fallback = ["Indiranagar","Koramangala","Whitefield","HSR Layout","Hebbal"];
+  var near = (NEAR[AREA.toLowerCase()] || fallback).filter(function(l){ return l.toLowerCase() !== AREA.toLowerCase(); }).slice(0, 5);
+  var LOCS = [AREA].concat(near);
+
+  /* ---------- sample listings (realistic Bengaluru 2026 pricing) ---------- */
+  var U = function(id, w){ return "https://images.unsplash.com/" + id + "?w=" + (w || 900) + "&q=78&auto=format&fit=crop"; };
+  var L = [
+    {mode:"buy", title:"2 BHK apartment in a gated society", bhk:2, type:"Apartment", sqft:1180, price:7800000, loc:0, status:"Ready to move", facing:"East facing", img:"photo-1764996915324-91919cee14d3", feat:true},
+    {mode:"buy", title:"3 BHK corner flat with two balconies", bhk:3, type:"Apartment", sqft:1620, price:11500000, loc:1, status:"Ready to move", facing:"North-east", img:"photo-1775582336464-7a5311bf6848", feat:true},
+    {mode:"buy", title:"3 BHK in a new tower, possession 2027", bhk:3, type:"Apartment", sqft:1480, price:13200000, loc:0, status:"Under construction", facing:"East facing", img:"photo-1564486593523-38d62206e706", feat:true},
+    {mode:"buy", title:"2 BHK resale, 6th floor, covered parking", bhk:2, type:"Apartment", sqft:1050, price:6400000, loc:2, status:"Resale", facing:"West facing", img:"photo-1630618468400-ac074bd3408f"},
+    {mode:"buy", title:"30x40 residential plot in a layout", bhk:4, type:"Plot", sqft:1200, price:5800000, loc:3, status:"Plot", facing:"North facing", img:"photo-1665329140125-7f29b6fe01b9"},
+    {mode:"buy", title:"2 BHK near the main road, low floor", bhk:2, type:"Apartment", sqft:990, price:5900000, loc:4, status:"Resale", facing:"South facing", img:"photo-1549499090-c9203d2b20ad"},
+    {mode:"buy", title:"3 BHK with clubhouse and pool", bhk:3, type:"Apartment", sqft:1710, price:14800000, loc:1, status:"Ready to move", facing:"East facing", img:"photo-1636392881522-e1f0e14fcfe2"},
+    {mode:"rent", title:"2 BHK semi-furnished, gated society", bhk:2, type:"Apartment", sqft:1150, price:28000, loc:0, status:"Available now", facing:"East facing", img:"photo-1771327811766-5f4149190b3d"},
+    {mode:"rent", title:"3 BHK fully furnished with balcony", bhk:3, type:"Apartment", sqft:1550, price:45000, loc:1, status:"From next month", facing:"North facing", img:"photo-1662352137320-d1ac1494c8f1"},
+    {mode:"rent", title:"1 BHK for working professionals", bhk:1, type:"Apartment", sqft:620, price:16500, loc:2, status:"Available now", facing:"West facing", img:"photo-1576324743689-80f049ed6f44"},
+    {mode:"rent", title:"2 BHK family flat near schools", bhk:2, type:"Apartment", sqft:1080, price:31000, loc:3, status:"Available now", facing:"East facing", img:"photo-1682662046486-23b39bda0799"},
+    {mode:"rent", title:"3 BHK in a low-rise building", bhk:3, type:"Apartment", sqft:1400, price:38000, loc:4, status:"Available now", facing:"South facing", img:"photo-1670504503763-7026e1ad278b"}
+  ];
+  L.forEach(function(x){ x.locName = LOCS[Math.min(x.loc, LOCS.length - 1)]; });
+
+  var fmtPrice = function(x){
+    if (x.mode === "rent") return "₹" + x.price.toLocaleString("en-IN") + "<small> / month</small>";
+    return x.price >= 10000000 ? "₹" + (x.price / 10000000).toFixed(2).replace(/0$/, "") + " Cr" : "₹" + Math.round(x.price / 100000) + " L";
+  };
+  var enquireText = function(x){
+    return "Hi " + NAME + ", I'm interested in the " + x.title.toLowerCase() + " in " + x.locName +
+      " (" + (x.mode === "rent" ? "rent" : "buy") + ", " + fmtPrice(x).replace(/<[^>]+>/g, "") + "). Is it still available?";
+  };
+
+  /* featured stacking cards */
+  var stack = document.getElementById("stack");
+  L.filter(function(x){ return x.feat; }).forEach(function(x, i, arr){
+    var el = document.createElement("article");
+    el.className = "stack-card";
+    el.style.top = "calc(var(--nav-h) + 24px + " + (i * 22) + "px)";
+    el.innerHTML =
+      '<div class="pic"><img src="' + U(x.img, 1300) + '" alt="' + x.title + '" loading="lazy"><span class="tag">' + x.status + '</span></div>' +
+      '<div class="body"><div class="num"><span>Featured ' + String(i + 1).padStart(2, "0") + ' / ' + String(arr.length).padStart(2, "0") + '</span><span>' + x.type + '</span></div>' +
+      '<h3>' + x.bhk + ' BHK in ' + x.locName + '</h3>' +
+      '<p class="loc"><svg><use href="#i-pin"/></svg>' + x.locName + ', Bengaluru · ' + x.facing + '</p>' +
+      '<div class="specs"><span><b>' + x.bhk + ' BHK</b>Bedrooms</span><span><b>' + x.sqft.toLocaleString("en-IN") + '</b>sq ft</span><span><b>' + x.status + '</b>Status</span></div>' +
+      '<div class="price">' + fmtPrice(x) + '</div>' +
+      '<div class="card-actions"><a class="btn wa" target="_blank" rel="noopener" href="' + waLink(enquireText(x)) + '"><svg><use href="#i-wa"/></svg>Enquire</a>' +
+      '<a class="btn ghost" href="' + TEL + '"><svg><use href="#i-phone"/></svg>Call</a></div></div>';
+    stack.appendChild(el);
+  });
+
+  /* filters */
+  var BUDGETS = {
+    buy: [["", "Any budget"], ["0-6000000", "Under ₹60 L"], ["6000000-9000000", "₹60 L to 90 L"], ["9000000-12000000", "₹90 L to 1.2 Cr"], ["12000000-99999999", "Above ₹1.2 Cr"]],
+    rent: [["", "Any budget"], ["0-20000", "Under ₹20,000"], ["20000-35000", "₹20,000 to 35,000"], ["35000-9999999", "Above ₹35,000"]]
+  };
+  var state = { mode: "buy", bhk: "", budget: "", loc: "" };
+  var fill = function(sel, opts){ sel.innerHTML = opts.map(function(o){ return '<option value="' + o[0] + '">' + o[1] + '</option>'; }).join(""); };
+  var locOpts = [["", "All localities"]].concat(LOCS.map(function(l){ return [l, l]; }));
+  fill(document.getElementById("fLoc"), locOpts);
+  fill(document.getElementById("hsLoc"), locOpts);
+  fill(document.getElementById("eLoc"), [["Any", "Any"]].concat(LOCS.map(function(l){ return [l, l]; })));
+  var setBudgets = function(){ fill(document.getElementById("fBudget"), BUDGETS[state.mode]); fill(document.getElementById("hsBudget"), BUDGETS[heroMode]); };
+  var heroMode = "buy";
+
+  var grid = document.getElementById("grid");
+  var render = function(){
+    var rows = L.filter(function(x){
+      if (x.mode !== state.mode) return false;
+      if (state.bhk && (state.bhk === "4" ? x.bhk < 4 : x.bhk !== +state.bhk)) return false;
+      if (state.loc && x.locName !== state.loc) return false;
+      if (state.budget) { var b = state.budget.split("-"); if (x.price < +b[0] || x.price > +b[1]) return false; }
+      return true;
+    });
+    document.getElementById("fCount").textContent = "Showing " + rows.length + " of " + L.filter(function(x){ return x.mode === state.mode; }).length + " homes";
+    grid.innerHTML = rows.length ? rows.map(function(x){
+      return '<article class="lcard"><div class="pic"><img src="' + U(x.img) + '" alt="' + x.title + '" loading="lazy"><span class="status">' + x.status + '</span></div>' +
+        '<div class="b"><div class="price">' + fmtPrice(x) + '</div><h3>' + x.title + '</h3>' +
+        '<p class="loc"><svg><use href="#i-pin"/></svg>' + x.locName + '</p>' +
+        '<div class="meta"><span>' + (x.type === "Plot" ? "Plot" : x.bhk + " BHK") + '</span><span>' + x.sqft.toLocaleString("en-IN") + ' sq ft</span><span>' + x.facing + '</span></div>' +
+        '<div class="acts"><a class="btn wa" target="_blank" rel="noopener" href="' + waLink(enquireText(x)) + '"><svg><use href="#i-wa"/></svg>Enquire</a>' +
+        '<a class="btn ghost" href="' + TEL + '"><svg><use href="#i-phone"/></svg>Call</a></div></div></article>';
+    }).join("") : '<div class="empty">No homes match these filters right now. <a target="_blank" rel="noopener" href="' +
+      waLink("Hi " + NAME + ", I'm looking for a home in " + (state.loc || AREA) + ". Can you share what's available?") +
+      '">Tell us what you need on WhatsApp</a> and we will check new listings for you.</div>';
+  };
+
+  var setMode = function(m){
+    state.mode = m; state.budget = "";
+    document.querySelectorAll("#fMode button").forEach(function(b){ b.classList.toggle("on", b.dataset.mode === m); });
+    setBudgets(); render();
+  };
+  document.querySelectorAll("#fMode button").forEach(function(b){ b.onclick = function(){ setMode(b.dataset.mode); }; });
+  document.querySelectorAll("#fBhk .chip").forEach(function(c){ c.onclick = function(){
+    state.bhk = c.dataset.bhk;
+    document.querySelectorAll("#fBhk .chip").forEach(function(x){ x.classList.toggle("on", x === c); });
+    render();
+  }; });
+  document.getElementById("fBudget").onchange = function(e){ state.budget = e.target.value; render(); };
+  document.getElementById("fLoc").onchange = function(e){ state.loc = e.target.value; render(); };
+
+  // hero search drives the listing filters
+  document.querySelectorAll("#heroSearch .seg button").forEach(function(b){ b.onclick = function(){
+    heroMode = b.dataset.mode;
+    document.querySelectorAll("#heroSearch .seg button").forEach(function(x){ x.classList.toggle("on", x === b); });
+    fill(document.getElementById("hsBudget"), BUDGETS[heroMode]);
+  }; });
+  var scrollToEl = function(sel){ var t = document.querySelector(sel); if (window.lenis) window.lenis.scrollTo(t, { offset: -70 }); else t.scrollIntoView({ behavior: "smooth" }); };
+  document.getElementById("hsGo").onclick = function(){
+    setMode(heroMode);
+    state.bhk = document.getElementById("hsBhk").value;
+    state.budget = document.getElementById("hsBudget").value;
+    state.loc = document.getElementById("hsLoc").value;
+    document.getElementById("fBudget").value = state.budget;
+    document.getElementById("fLoc").value = state.loc;
+    document.querySelectorAll("#fBhk .chip").forEach(function(x){ x.classList.toggle("on", x.dataset.bhk === state.bhk); });
+    render(); scrollToEl("#properties");
+  };
+
+  // locality buttons
+  var locsEl = document.getElementById("locs");
+  LOCS.forEach(function(l){
+    var n = L.filter(function(x){ return x.locName === l; }).length;
+    var b = document.createElement("button");
+    b.innerHTML = l + " <small>" + n + " home" + (n === 1 ? "" : "s") + "</small>";
+    b.onclick = function(){ state.loc = l; document.getElementById("fLoc").value = l; setMode(state.mode); scrollToEl("#properties"); };
+    locsEl.appendChild(b);
+  });
+
+  setBudgets(); render();
+
+  /* enquiry form -> WhatsApp */
+  document.getElementById("enq").addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("eName"), phone = document.getElementById("ePhone"), ok = true;
+    [name, phone].forEach(function(f){ f.classList.remove("err"); });
+    if (!name.value.trim()) { name.classList.add("err"); ok = false; }
+    if (phone.value.replace(/\D/g, "").length < 10) { phone.classList.add("err"); ok = false; }
+    if (!ok) return;
+    var msg = "Hi " + NAME + ", new enquiry from your website:\n" +
+      "Name: " + name.value.trim() + "\nPhone: " + phone.value.trim() +
+      "\nWants to: " + document.getElementById("eWant").value + "\nBHK: " + document.getElementById("eBhk").value +
+      "\nBudget: " + (document.getElementById("eBudget").value.trim() || "Not given") +
+      "\nLocality: " + document.getElementById("eLoc").value +
+      (document.getElementById("eMsg").value.trim() ? "\nNote: " + document.getElementById("eMsg").value.trim() : "");
+    window.open(waLink(msg), "_blank", "noopener");
+  });
+
+  /* ---------- motion: smooth scroll, reveals, stacking cards ---------- */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && window.Lenis) {
+    window.lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+    var raf = function(t){ window.lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener("click", function(e){
+      var id = a.getAttribute("href"); if (id.length < 2) return; e.preventDefault(); scrollToEl(id);
+    }); });
+  }
+  var io = new IntersectionObserver(function(ents){ ents.forEach(function(en){
+    if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+  }); }, { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+  // hero content visible immediately
+  requestAnimationFrame(function(){ document.querySelectorAll(".hero .rv").forEach(function(el){ el.classList.add("in"); }); });
+
+  var nav = document.getElementById("nav");
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".stack-card"));
+  var tick = function(){
+    nav.classList.toggle("solid", window.scrollY > window.innerHeight * 0.6);
+    if (reduce) return;
+    // each card shrinks and dims slightly as the next one slides over it
+    cards.forEach(function(c, i){
+      var next = cards[i + 1]; if (!next) { c.style.transform = ""; c.style.filter = ""; return; }
+      var a = c.getBoundingClientRect(), b = next.getBoundingClientRect();
+      var p = Math.min(Math.max((a.bottom - b.top) / a.height, 0), 1);
+      c.style.transform = "scale(" + (1 - p * 0.05) + ")";
+      c.style.filter = "brightness(" + (1 - p * 0.12) + ")";
+    });
+  };
+  var ticking = false;
+  window.addEventListener("scroll", function(){ if (!ticking) { ticking = true; requestAnimationFrame(function(){ tick(); ticking = false; }); } }, { passive: true });
+  tick();
+})();
+</script>
+</body>
+</html>
